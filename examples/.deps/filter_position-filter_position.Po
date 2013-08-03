@@ -1,0 +1,123 @@
+filter_position-filter_position.o filter_position-filter_position.o:  \
+ filter_position.c ../lib/chess_toolkit.h ../lib/chess_toolkit/ct_types.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdbool.h \
+  ../lib/chess_toolkit/ct_error.h ../lib/chess_toolkit/ct_square.h \
+  ../lib/chess_toolkit/ct_types.h ../lib/chess_toolkit/ct_piece.h \
+  ../lib/chess_toolkit/ct_bit_board.h ../lib/chess_toolkit/ct_position.h \
+  ../lib/chess_toolkit/ct_move.h ../lib/chess_toolkit/ct_move_command.h \
+  ../lib/chess_toolkit/ct_move_stack.h \
+  ../lib/chess_toolkit/ct_piece_command.h ../lib/chess_toolkit/ct_graph.h \
+  ../lib/chess_toolkit/ct_position.h /usr/include/stdio.h \
+  /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/i386/_types.h /usr/include/secure/_stdio.h \
+  /usr/include/secure/_common.h ../lib/chess_toolkit/ct_command.h \
+  ../lib/chess_toolkit/ct_game_tags.h /usr/include/stdlib.h \
+  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
+  /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+  /usr/include/i386/signal.h /usr/include/i386/_structs.h \
+  /usr/include/sys/_structs.h /usr/include/machine/_structs.h \
+  /usr/include/mach/i386/_structs.h /usr/include/sys/resource.h \
+  /usr/include/machine/endian.h /usr/include/i386/endian.h \
+  /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
+  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/machine/types.h /usr/include/i386/types.h \
+  /usr/include/i386/_types.h
+
+../lib/chess_toolkit.h:
+
+../lib/chess_toolkit/ct_types.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdbool.h:
+
+../lib/chess_toolkit/ct_error.h:
+
+../lib/chess_toolkit/ct_square.h:
+
+../lib/chess_toolkit/ct_types.h:
+
+../lib/chess_toolkit/ct_piece.h:
+
+../lib/chess_toolkit/ct_bit_board.h:
+
+../lib/chess_toolkit/ct_position.h:
+
+../lib/chess_toolkit/ct_move.h:
+
+../lib/chess_toolkit/ct_move_command.h:
+
+../lib/chess_toolkit/ct_move_stack.h:
+
+../lib/chess_toolkit/ct_piece_command.h:
+
+../lib/chess_toolkit/ct_graph.h:
+
+../lib/chess_toolkit/ct_position.h:
+
+/usr/include/stdio.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/i386/_types.h:
+
+/usr/include/secure/_stdio.h:
+
+/usr/include/secure/_common.h:
+
+../lib/chess_toolkit/ct_command.h:
+
+../lib/chess_toolkit/ct_game_tags.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/Availability.h:
+
+/usr/include/AvailabilityInternal.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/i386/signal.h:
+
+/usr/include/i386/_structs.h:
+
+/usr/include/sys/_structs.h:
+
+/usr/include/machine/_structs.h:
+
+/usr/include/mach/i386/_structs.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/i386/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/_OSByteOrder.h:
+
+/usr/include/libkern/i386/_OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/i386/types.h:
+
+/usr/include/i386/_types.h:

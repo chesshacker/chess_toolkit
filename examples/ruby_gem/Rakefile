@@ -1,0 +1,34 @@
+# using rake-compiler gem
+require 'rake/extensiontask'
+require 'rake/testtask'
+
+spec = Gem::Specification.new do |s|
+  s.name        = 'chess_toolkit'
+  s.platform    = Gem::Platform::RUBY
+  s.version     = '0.0.0'
+  s.date        = '2013-07-28'
+  s.summary     = "Chess Toolkit"
+  s.description = "a software library for creating chess programs"
+  s.authors     = ["Steve Ortiz"]
+  s.email       = 'steve@ortizaggies.com'
+  s.license     = 'Apache License, Version 2.0'
+  s.files       = Dir.glob('lib/**/*.rb') + Dir.glob('ext/**/*.{c,h,rb}')
+  s.extensions  = FileList["ext/**/extconf.rb"]
+  s.homepage    = 'http://rubygems.org/gems/TODO'
+end
+
+# add the default gem packing task
+Gem::PackageTask.new(spec) do |pkg|
+end
+
+Rake::ExtensionTask.new('chess_toolkit')
+
+task :test => :compile
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.test_files = FileList['test/test*.rb']
+  t.verbose = true
+end
+
+desc "Run tests"
+task :default => :test

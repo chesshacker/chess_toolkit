@@ -1,0 +1,97 @@
+*** Performance ***
+
+export CT_CHECK_LONG=1; (cd tests; time ./check_ct); export -n CT_CHECK_LONG
+
+real        0m12.830s
+user        0m12.676s
+sys         0m0.130s
+
+*** SLOC ***
+
+cloc.pl lib --exclude-lang=make; cloc.pl tests --exclude-lang=make; cloc.pl examples --exclude-lang=make; cloc.pl lib tests examples --exclude-lang="make"
+
+LIB
+      66 text files.
+      66 unique files.                              
+       3 files ignored.
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                               34            503            572           3332
+C/C++ Header                    27            194            463            468
+lex                              1             11             16             73
+yacc                             1             19             17             64
+-------------------------------------------------------------------------------
+SUM:                            63            727           1068           3937
+-------------------------------------------------------------------------------
+
+TESTS
+      43 text files.
+      43 unique files.                              
+       3 files ignored.
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                               38            595            695           4015
+C/C++ Header                     2             11             33             26
+-------------------------------------------------------------------------------
+SUM:                            40            606            728           4041
+-------------------------------------------------------------------------------
+
+EXAMPLES
+      21 text files.
+      21 unique files.                              
+       8 files ignored.
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Ruby                             6             16             76            805
+C                                6            109            134            600
+C/C++ Header                     1              4             16              8
+-------------------------------------------------------------------------------
+SUM:                            13            129            226           1413
+-------------------------------------------------------------------------------
+
+TOTAL
+     130 text files.
+     130 unique files.                                          
+      14 files ignored.
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                               78           1207           1401           7947
+Ruby                             6             16             76            805
+C/C++ Header                    30            209            512            502
+lex                              1             11             16             73
+yacc                             1             19             17             64
+-------------------------------------------------------------------------------
+SUM:                           116           1462           2022           9391
+-------------------------------------------------------------------------------
+
+*** Indentation / Coding Style ***
+
+Using BSD indent with .indent.pro in home directory, which includes these options:
+  -bap -bl -ncdb -nce -di2 -i2 -nsc -l120
+and many typedefs.  A copy of this .indent.pro file is included in the maintainer directory.
+
+*** Notes on how the program was setup with autoconf...
+
+With the source code, run
+
+autoscan
+
+And then tweak to create the configure.ac script
+
+With configure.ac, Makefile.am, lib/Makefile.am, tests/Makefile.am, the source files, maintainer
+directory and the other project files (AUTHORS, COPYING, NEWS, README.md, THANKS, MANUAL.*), run 
+the following:
+
+libtoolize --copy
+aclocal
+autoheader
+automake --add-missing --copy
+autoconf
