@@ -16,9 +16,9 @@
           <div class="frame frame-center">
             <h1>Chess Toolkit Manual</h1>
 
-<p>Chess Toolkit is a software library for creating chess programs.  It is written in C with an object-oriented API, so it is straightforward to use on its own or to extend another language such as Ruby.</p>
+<p>Chess Toolkit is a software library for creating chess programs.  It is written in C with an object-oriented API, so it is straightforward to use on its own or to extend other languages such as Ruby.</p>
 
-<p>The Chess Toolkit is a work in progress, but it is quite useful in its current state.  It understands the rules of chess, Forsyth-Edwards Notation (FEN), Short Algebraic Notation (SAN), and the basics of Portable Game Notation (PGN).  With the current features, you can do a lot.  For example, the author has used it to write software that parses through millions of games, collecting statistics on openings and scoring each position based on the game results and player ratings.  Hopefully you will find it useful too.</p>
+<p>The Chess Toolkit is a work in progress, but it is quite useful in its current state.  It understands the rules of chess, Forsyth-Edwards Notation (FEN), Short Algebraic Notation (SAN), and the basics of Portable Game Notation (PGN).  With the current features, you can do a lot.  For example, the author has used it to write software that parses millions of games, collecting statistics on openings and scoring each position based on the game results and player ratings.  Hopefully, you will find it useful too.</p>
 
 <p>This document is the Chess Toolkit's primary documentation, though many questions can also be answered by exploring the comprehensive unit test suite in the tests directory, or by reviewing the library's code in the lib directory.  This document is organized into the following sections:</p>
 
@@ -249,7 +249,7 @@ make check
 
 <p><strong>CtGameTags</strong> is an ADT used to store tag pairs describing a chess game.  Currently, it is limited to the following tags: Event, Site, Date, Round, White, Black, Result, WhiteElo, BlackElo and ECO.  A future release is likely to add the FEN tag so that graphs from positions other than the standard initial position are easier to work with.</p>
 
-<p><strong>CtCommand</strong> is a pointer to a <strong>CtCommandStruct</strong>.  The reason CtCommandStruct is available, is there could be cases where you'd rather not manually manage memory for each command; then it's handy to reference the struct version.  The command object follows the command design pattern.  It is provided a delegate and a method which accepts that delegate.  Passing a command object allows a the receiver to easily callback to the delegate of your command.  There are several variants of this command object.</p>
+<p><strong>CtCommand</strong> is a pointer to a <strong>CtCommandStruct</strong>.  The reason CtCommandStruct is available, is there could be cases where you'd rather not manually manage memory for each command; then it's handy to reference the struct version.  The command object follows the command design pattern.  It is provided a delegate and a method which accepts that delegate.  Passing a command object allows the receiver to easily callback to the delegate of your command.  There are several variants of this command object.</p>
 
 <p><strong>CtMoveCommand</strong> is a pointer to a <strong>CtMoveCommandStruct</strong>.  It follows the command design pattern, and takes an argument of CtMove.</p>
 
@@ -278,7 +278,7 @@ CtBitBoard bit_board = ct_bit_board_make();
 
 <h3>Special Cases: CtBitBoardArrays</h3>
 
-<p>CtBitBoardArrays do not have new or free functions.  They should be defined like so:</p>
+<p>CtBitBoardArrays do not have new or free functions.  They should be defined like this:</p>
 
 <pre><code>CtBitBoard bit_board_array[CT_BIT_BOARD_ARRAY_LENGTH];
 </code></pre>
@@ -366,7 +366,7 @@ void ct_error_set_custom_handler(CtErrorHandler error_handler);
 </code></pre>
 
 <blockquote>
-<p>is used to setup a custom error handler.  You pass it a function that takes const char * as an argument, and this function will be called instead of the default error handling function, should an unrecoverable error occur.</p>
+<p>is used to set up a custom error handler.  You pass it a function that takes const char * as an argument, and this function will be called instead of the default error handling function, should an unrecoverable error occur.</p>
 </blockquote>
 
 <h3>Square functions</h3>

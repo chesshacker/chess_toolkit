@@ -1,9 +1,9 @@
 Chess Toolkit Manual
 ====================
 
-Chess Toolkit is a software library for creating chess programs.  It is written in C with an object-oriented API, so it is straightforward to use on its own or to extend another language such as Ruby.
+Chess Toolkit is a software library for creating chess programs.  It is written in C with an object-oriented API, so it is straightforward to use on its own or to extend other languages such as Ruby.
 
-The Chess Toolkit is a work in progress, but it is quite useful in its current state.  It understands the rules of chess, Forsyth-Edwards Notation (FEN), Short Algebraic Notation (SAN), and the basics of Portable Game Notation (PGN).  With the current features, you can do a lot.  For example, the author has used it to write software that parses through millions of games, collecting statistics on openings and scoring each position based on the game results and player ratings.  Hopefully you will find it useful too.
+The Chess Toolkit is a work in progress, but it is quite useful in its current state.  It understands the rules of chess, Forsyth-Edwards Notation (FEN), Short Algebraic Notation (SAN), and the basics of Portable Game Notation (PGN).  With the current features, you can do a lot.  For example, the author has used it to write software that parses millions of games, collecting statistics on openings and scoring each position based on the game results and player ratings.  Hopefully, you will find it useful too.
 
 This document is the Chess Toolkit's primary documentation, though many questions can also be answered by exploring the comprehensive unit test suite in the tests directory, or by reviewing the library's code in the lib directory.  This document is organized into the following sections:
 
@@ -236,7 +236,7 @@ chess_toolkit.h includes stdint.h and stdbool.h since it uses some of these stan
 
 **CtGameTags** is an ADT used to store tag pairs describing a chess game.  Currently, it is limited to the following tags: Event, Site, Date, Round, White, Black, Result, WhiteElo, BlackElo and ECO.  A future release is likely to add the FEN tag so that graphs from positions other than the standard initial position are easier to work with.
 
-**CtCommand** is a pointer to a **CtCommandStruct**.  The reason CtCommandStruct is available, is there could be cases where you'd rather not manually manage memory for each command; then it's handy to reference the struct version.  The command object follows the command design pattern.  It is provided a delegate and a method which accepts that delegate.  Passing a command object allows a the receiver to easily callback to the delegate of your command.  There are several variants of this command object.
+**CtCommand** is a pointer to a **CtCommandStruct**.  The reason CtCommandStruct is available, is there could be cases where you'd rather not manually manage memory for each command; then it's handy to reference the struct version.  The command object follows the command design pattern.  It is provided a delegate and a method which accepts that delegate.  Passing a command object allows the receiver to easily callback to the delegate of your command.  There are several variants of this command object.
 
 **CtMoveCommand** is a pointer to a **CtMoveCommandStruct**.  It follows the command design pattern, and takes an argument of CtMove.
 
@@ -263,7 +263,7 @@ There are similar functions to free other ADTs, including CtMoveStack, CtGraph, 
 
 ### Special Cases: CtBitBoardArrays
 
-CtBitBoardArrays do not have new or free functions.  They should be defined like so:
+CtBitBoardArrays do not have new or free functions.  They should be defined like this:
 
     CtBitBoard bit_board_array[CT_BIT_BOARD_ARRAY_LENGTH];
 
@@ -332,7 +332,7 @@ Functions
 
     typedef void (*CtErrorHandler) (const char *);
     void ct_error_set_custom_handler(CtErrorHandler error_handler);
-> is used to setup a custom error handler.  You pass it a function that takes const char * as an argument, and this function will be called instead of the default error handling function, should an unrecoverable error occur.
+> is used to set up a custom error handler.  You pass it a function that takes const char * as an argument, and this function will be called instead of the default error handling function, should an unrecoverable error occur.
 
 ### Square functions
 
