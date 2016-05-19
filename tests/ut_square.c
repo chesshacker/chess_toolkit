@@ -57,8 +57,8 @@ START_TEST(ut_square_rank)
   ck_assert_int_eq(ct_square_rank(A8), RANK_8);
   ck_assert_int_eq(ct_square_rank(H8), RANK_8);
   /* this function does not check for valid input -- garbage in, garbage out */
-  ck_assert_int_eq(ct_square_file(SQUARE_NOT_FOUND), RANK_8);
-  ck_assert_int_eq(ct_square_file(NUMBER_OF_SQUARES), RANK_1);
+  ck_assert_int_eq(ct_square_rank(SQUARE_NOT_FOUND), RANK_NOT_FOUND);
+  ck_assert_int_eq(ct_square_rank(NUMBER_OF_SQUARES), NUMBER_OF_RANKS);
 } END_TEST
 
 START_TEST(ut_rank_from_char)
